@@ -4,4 +4,6 @@ const db = new Sequelize('postgres://muoqdwlk:0uozmBhiN_K97aVf8HQup6QgdVIXqIDJ@p
   dialect: 'postgres'  
 });
 
+console.log('Successfully connected to db');
+
 module.exports = db;
