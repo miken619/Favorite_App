@@ -11,6 +11,10 @@ export default class App extends Component {
 
   constructor() {
     super();
+    this.state = {
+      user: '',
+      images: []
+    }
   }
 
   componentDidMount() {
@@ -18,13 +22,13 @@ export default class App extends Component {
   }
 
   handleSubmission() {
-
+    
   }
 
   render() {
     return (
       <div>
-        <div>
+        <div className="User">
           <User />
         </div>
         <div className="ContentContainer">

@@ -3,9 +3,41 @@ import ContentEntry from './ContentEntry.jsx';
 
 
 const Content = (props) => {
+  
   return (
-    <div>
-      
+    <div className="ContentDisplay">
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>    
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>   
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>    
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/> 
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>    
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>   
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>    
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>
+      <ContentEntry/>
     </div>
   );
 

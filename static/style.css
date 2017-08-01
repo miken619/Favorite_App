@@ -6,26 +6,49 @@
 }
 .Submission {
   width: 25%;
-  height: 400px;
+  height: 800px;
   background-color: yellow;
 }
 
 
 .Content {
   width: 75%;
-  height: 400px;
+  height: 800px;
+  
   background-color: green;
 
 }
 
 .ContentEntry {
   width: 75px;
-  height: 75px;
+  height: 75px;  
+  margin: 10px;
+  border-style: solid;
   background-color: red;
-
+ 
 }
 
 .ContentContainer {
   display: flex;
   width: 100%
+  overflow: scroll;
+}
+
+#link {
+  margin: 35px;
+  width: 100%;
+}
+
+#description {
+  margin-top: 20px;
+}
+
+textarea {
+   resize: none;
+}
+
+.ContentDisplay{
+  display: flex;
+  flex-wrap: wrap;
+  
 }
