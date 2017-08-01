@@ -1,11 +1,11 @@
 const db = require('../db/config');
 
 module.exports = {
-  fetchUser: (req, res) => {
+  fetchContent: (req, res) => {
 
   },
 
-  createUser: (req, res) => {
+  createContent: (req, res) => {
   
   }
 

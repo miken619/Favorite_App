@@ -10,7 +10,7 @@ const User = db.define('user', {
     type: Sequelize.STRING,
     allowNull: false
   }
-  id: {
+  user_id: {
     type: Sequelize.INTEGER,
     allowNull: false;
   }
@@ -21,7 +21,7 @@ const Content = db.define('content', {
     type: Sequelize.STRING,
     allowNull: false
   }
-  id: {
+  user_id: {
     type: Sequelize.STRING,
     allowNull: false
   }

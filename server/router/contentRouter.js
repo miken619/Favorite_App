@@ -1,6 +1,7 @@
 const router = require('express').Router();
+const controller = require('../controller/contentController');
 
-router.get('/findContent',);
-router.post('/createContent',)
+router.get('/findContent', controller.fetchContent);
+router.post('/createContent', controller.createContent)
 
-module.exports router;
+module.exports = router;

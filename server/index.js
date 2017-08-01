@@ -3,14 +3,15 @@ const parser = require('body-parser');
 const path = require('path');
 
 const app = express();
+const router = require('./router');
 
-app.use(parser.urlencoded({ extended: true })
+app.use(parser.urlencoded({ extended: true }))
    .use(parser.json())
-   .use(express.static(path.join(__dirname, '../static/index.js'))));
+   .use(express.static(path.join(__dirname, '../static')));
 
 app.use('/api', router);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, err => {
   if (err) {
