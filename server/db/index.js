@@ -9,10 +9,10 @@ const User = db.define('user', {
   password: {
     type: Sequelize.STRING,
     allowNull: false
-  }
+  },
   user_id: {
     type: Sequelize.INTEGER,
-    allowNull: false;
+    allowNull: false
   }
 });
 
@@ -21,9 +21,12 @@ const Content = db.define('content', {
     type: Sequelize.STRING,
     allowNull: false
   }
-  user_id: {
-    type: Sequelize.STRING,
-    allowNull: false
-  }
 });
 
+User.sync();
+Content.sync();
+
+module.exports = {
+  User,
+  Content
+};

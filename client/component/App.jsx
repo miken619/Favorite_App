@@ -24,8 +24,19 @@ export default class App extends Component {
     this.handleClicking = this.handleClicking.bind(this);
   }
 
-  componentDidMount() {
-    
+  componentDidMount() {   
+   
+    axios.get('/api/contents/fetchContent')
+         .then(({data}) => {
+           let temp = data.map(val => {
+             return val.link;
+           });
+           this.setState({
+             images: [...temp]
+           });
+         }).catch(err => {
+           console.log('Error in componentDidMount: ', err);
+         });
   }
   
   handleOnChange(event, name) {
@@ -42,6 +53,12 @@ export default class App extends Component {
       link: '',
       description: ''
     });
+
+    axios.post('/api/contents/createContent', {link: link})
+         .then(data => {
+       })
+         .catch(err => {
+       });
   }
 
   handleClicking(event, url, bool) {
