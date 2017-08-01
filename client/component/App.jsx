@@ -34,7 +34,9 @@ export default class App extends Component {
   handleSubmission(event) {
     let link = this.state.link;
     let description = this.state.description;
+    
     this.setState({
+      images: [link, ...this.state.images],
       link: '',
       description: ''
     });
@@ -50,7 +52,7 @@ export default class App extends Component {
         </div>
         <div className="ContentContainer">
           <div className="Content"> 
-            <Content/>
+            <Content images={this.state.images}/>
           </div>
           <div className="Submission" >
             <Submission handler={this.handleSubmission} change={this.handleOnChange} link={this.state.link} description={this.state.description}/>

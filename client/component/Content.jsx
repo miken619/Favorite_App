@@ -3,41 +3,12 @@ import ContentEntry from './ContentEntry.jsx';
 
 
 const Content = (props) => {
-  
   return (
     <div className="ContentDisplay">
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>    
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>   
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>    
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/> 
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>    
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>   
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>    
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>
-      <ContentEntry/>
+     {props.images.map((image, i) => {
+        return <ContentEntry image={image} key={i}/>
+     }
+     )}
     </div>
   );
 
