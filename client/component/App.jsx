@@ -7,7 +7,7 @@ import Content from './Content.jsx';
 import Submission from './Submission.jsx';
 
 
-export default class App extends {
+export default class App extends Component {
 
   constructor() {
     super();
@@ -27,11 +27,11 @@ export default class App extends {
         <div>
           <User />
         </div>
-        <div>
-          <div> 
-            <Content />
+        <div className="ContentContainer">
+          <div className="Content"> 
+            <Content/>
           </div>
-          <div>
+          <div className="Submission">
             <Submission />
           </div>
         </div>
