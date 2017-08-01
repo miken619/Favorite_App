@@ -6,8 +6,8 @@ const Content = (props) => {
   return (
     <div className="ContentDisplay">
      {props.images.map((image, i) => {
-        return <ContentEntry image={image} key={i}/>
-     }
+        return <ContentEntry image={image} key={i} handler={props.handler}/>
+        }
      )}
     </div>
   );

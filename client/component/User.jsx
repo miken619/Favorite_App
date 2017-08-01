@@ -2,7 +2,8 @@ import React from 'react';
 
 const User = () => {
   return (
-    <div>
+    <div> 
+      <span className="UserStyle">FAVE</span>
     </div>
 
 
