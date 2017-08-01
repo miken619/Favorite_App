@@ -13,16 +13,33 @@ export default class App extends Component {
     super();
     this.state = {
       user: '',
-      images: []
+      images: [],
+      link: '',
+      description: ''
     }
+    this.handleSubmission = this.handleSubmission.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
   }
 
   componentDidMount() {
+    
+  }
   
+  handleOnChange(event, name) {
+    this.setState({
+      [name]: event.target.value
+    });
   }
 
-  handleSubmission() {
+  handleSubmission(event) {
+    let link = this.state.link;
+    let description = this.state.description;
+    this.setState({
+      link: '',
+      description: ''
+    });
     
+ 
   }
 
   render() {
@@ -35,8 +52,8 @@ export default class App extends Component {
           <div className="Content"> 
             <Content/>
           </div>
-          <div className="Submission">
-            <Submission />
+          <div className="Submission" >
+            <Submission handler={this.handleSubmission} change={this.handleOnChange} link={this.state.link} description={this.state.description}/>
           </div>
         </div>
    
